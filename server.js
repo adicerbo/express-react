@@ -114,5 +114,7 @@ app.put("/people/:id", async (req, res) => {
 ///////////////////////////////
 // LISTENER
 ////////////////////////////////
-app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
+app.listen(process.env.PORT || 4000, function() {
+    console.log(`Express is listening on port ${PORT}`)
+})
 
